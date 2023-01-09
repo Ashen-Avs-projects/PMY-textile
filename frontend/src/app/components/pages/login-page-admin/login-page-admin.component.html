@@ -1,0 +1,44 @@
+<div class="sidebar">
+  <a class="active" href="/login-admin">Analytics</a>
+  <a  href="/login-admin">Total Sell</a>
+  <a  href="/login-admin">Total Orders</a>
+  <a href="/login-admin">Total Purches</a>
+  <a  href="/login-admin">location</a>
+  <a  href="/login-admin">Settings</a>
+</div>
+<div class="content" style="margin-top: -490px" >
+  <img src="assets/dashboard2.jpg" width="1250px" style="margin-top: -400px" >
+  <h1>All Users</h1>
+  <table id="items" >
+    <tr>
+      <th>User Id</th>
+      <th>User Name</th>
+      <th>User Email</th>
+      <th>User Address</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.address}}</td>
+      <td><a routerLink="/item/{{user.id}}"><Button>delete</Button></a></td>
+    </tr>
+  </table>
+</div>
+<div style="margin-top: -600px">
+<app-order-list-page></app-order-list-page>
+</div>
+
+<div style="margin-top: -580px">
+  <app-seller></app-seller>
+</div>
+
+<div style="margin-top: -800px">
+  <app-allsellerslist-page></app-allsellerslist-page>
+</div>
+
+
+
+
+
